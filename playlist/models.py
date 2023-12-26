@@ -12,3 +12,12 @@ class Song(db.Model):
 
     def __repr__(self):
         return f"Post('{self.song_id}', '{self.song_title}')"
+
+    def to_dict(self):
+        """Return a dictionary representation of the song."""
+        return {
+            'song_id': self.song_id,
+            'song_title': self.song_title,
+            'song_rating': self.song_rating,
+            'dynamic_attrs': self.dynamic_attrs,
+        }
