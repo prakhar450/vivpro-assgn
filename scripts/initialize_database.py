@@ -5,7 +5,7 @@ import json
 
 def load_data():
     # Read and transform JSON
-    with open('path_to_your_json_file.json', 'r') as file:
+    with open('../data/playlist[76].json', 'r') as file:
         data = json.load(file)
 
     songs_data = {}
