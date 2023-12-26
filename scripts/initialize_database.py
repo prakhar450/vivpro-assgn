@@ -3,6 +3,7 @@ import json
 from playlist.models import Song
 from sqlalchemy import inspect
 
+
 def load_data():
     # Read and transform JSON
     with open('../data/playlist[76].json', 'r') as file:
