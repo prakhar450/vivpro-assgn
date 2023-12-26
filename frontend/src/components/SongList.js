@@ -9,11 +9,19 @@ function SongList() {
 
     useEffect(() => {
         // Fetch songs whenever the currentPage or searchTerm changes
-        fetch(`/api/songs?page=${currentPage}&search=${encodeURIComponent(searchTerm)}`)
-            .then(response => response.json())
+        fetch(`/home?page=${currentPage}&search=${encodeURIComponent(searchTerm)}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
             .then(data => {
                 setSongs(data.songs);
                 setTotalPages(data.total_pages);
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
             });
     }, [currentPage, searchTerm]);
 

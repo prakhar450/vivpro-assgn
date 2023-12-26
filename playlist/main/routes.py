@@ -12,7 +12,7 @@ def home():
     search = request.args.get('search', '', type=str)
     song_query = Song.query
     if search:
-        song_query = song_query.filter(Song.title.ilike(f'%{search}%'))
+        song_query = song_query.filter(Song.song_title.ilike(f'%{search}%'))
     paginated_songs = song_query.paginate(page=page, per_page=per_page, error_out=False)
     songs = [song.to_dict() for song in paginated_songs.items]
     return jsonify({'songs': songs, 'total_pages': paginated_songs.pages})
