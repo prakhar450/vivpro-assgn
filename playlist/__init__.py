@@ -15,7 +15,7 @@ def create_app():
 
     db.init_app(app)
 
-    from playlist.main.routes import main
-    app.register_blueprint(main)
+    from playlist.main.routes import application
+    app.register_blueprint(application)
 
     return app

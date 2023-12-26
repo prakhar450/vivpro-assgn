@@ -2,4 +2,11 @@ import os
 
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
+    DB_USERNAME = os.getenv('DB_USERNAME', 'prakhar')
+    DB_PASSWORD = os.getenv('DB_PASSWORD', 'password')
+    DB_HOST = os.getenv('DB_HOST', 'localhost')
+    DB_NAME = os.getenv('DB_NAME', 'flask_db')
+
+    # Building the database URI
+    SQLALCHEMY_DATABASE_URI = f'postgresql+psycopg2://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False

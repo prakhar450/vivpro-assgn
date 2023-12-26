@@ -1,7 +1,7 @@
 from playlist import create_app, db
-from playlist.models import Artist, Album, Genre, Song
 import json
-
+from playlist.models import Song
+from sqlalchemy import inspect
 
 def load_data():
     # Read and transform JSON
@@ -36,9 +36,16 @@ def load_data():
 if __name__ == '__main__':
     app = create_app()
     with app.app_context():
+        inspector = inspect(db.engine)
+        if not inspector.has_table(Song.__tablename__):
+            db.create_all()
+            print(f"Table '{Song.__tablename__}' created.")
+        else:
+            print(f"Table '{Song.__tablename__}' already exists.")
         # Check if data needs to be loaded
         if not Song.query.first():
             load_data()
             print("Database initialized.")
         else:
             print("Database already initialized.")
+

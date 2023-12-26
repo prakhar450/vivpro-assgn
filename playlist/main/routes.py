@@ -1,12 +1,19 @@
-from flask import Flask
-app = Flask(__name__)
+from flask import Flask, Blueprint
+
+application = Blueprint('application', __name__)
 
 
-@app.route("/")
-@app.route("/home")
+@application.route("/")
+@application.route("/home")
 def home():
-    return "<h1>Home Page</h1>"
+    # Returning an api for showing in  reactjs
+    return {
+        'Name': "geek",
+        "Age": "22",
+        "Date": "x",
+        "programming": "python"
+    }
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
