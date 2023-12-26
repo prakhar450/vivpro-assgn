@@ -1,5 +1,3 @@
-# File: /YourApp/app/__init__.py
-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from playlist.config import Config
