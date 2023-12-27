@@ -30,7 +30,8 @@ pip install -r requirements.txt
 
 1. Install PostgreSQL.
 2. Create two databases named `flask_db` and `test_db`.
-3. Run the database initialization script:
+3. Make sure that `DB_USERNAME` and `DB_PASSWORD` are in your path or edit config.py file accordingly.
+4. Run the database initialization script:
 
    ```bash
    python scripts/initialize_database.py
