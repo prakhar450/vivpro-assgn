@@ -62,7 +62,7 @@ You can test the API endpoints using tools like Postman or `curl`.
 To run automated tests for this system:
 
 ```bash
-pytest
+python -m pytest
 ```
 
 ## Screenshots
