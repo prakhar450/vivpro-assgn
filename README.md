@@ -76,6 +76,7 @@ Below are screenshots demonstrating the API functionality:
 ![Search for Song](https://github.com/prakhar450/vivpro-assgn/assets/55326021/0620f4c2-d832-4c14-85ad-c8299571436e)
 
 **Update Rating of a Song**  
-![Update Rating of a Song](https://github.com/prakhar450/vivpro-assgn/assets/55326021/25d5b686-e1f5-4799-9dd0-f7044c6f5c11)
+<img width="1787" alt="image" src="https://github.com/prakhar450/vivpro-assgn/assets/55326021/f5e0efd7-660e-4609-8e6a-428a361c7139">
+
 
 
