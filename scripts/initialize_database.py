@@ -6,7 +6,7 @@ from sqlalchemy import inspect
 
 def load_data():
     # Read and transform JSON
-    with open('../data/playlist[76].json', 'r') as file:
+    with open('data/playlist[76].json', 'r') as file:
         data = json.load(file)
 
     songs_data = {}
