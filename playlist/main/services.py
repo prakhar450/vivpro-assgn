@@ -54,7 +54,7 @@ def update_song_rating(song_id, new_rating):
     try:
         song = Song.query.get(song_id)
         if song:
-            song.star_rating = new_rating
+            song.song_rating = new_rating
             db.session.commit()
             return song
         else:

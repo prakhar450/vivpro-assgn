@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from services import get_paginated_songs, search_songs, update_song_rating
+from .services import get_paginated_songs, search_songs, update_song_rating
 
 application = Blueprint('application', __name__)
 
@@ -66,7 +66,7 @@ def update_song_rating_route(song_id):
     - song_id (str): The unique identifier of the song.
 
     JSON Payload:
-    - star_rating (float/int): The new star rating to be set for the song.
+    - song_rating (float/int): The new star rating to be set for the song.
 
     Returns:
     - On Success: JSON object with 'message' indicating successful update.
