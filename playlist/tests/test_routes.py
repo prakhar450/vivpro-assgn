@@ -23,7 +23,7 @@ def test_search_songs_route(test_client, init_database):
 def test_update_song_rating_route(test_client, init_database):
     song_id = "1"
     new_rating = 4.0
-    response = test_client.post(f"/update_rating/{song_id}", json={"song_rating": new_rating})
+    response = test_client.put(f"/update_rating/{song_id}", json={"song_rating": new_rating})
     assert response.status_code == 200
     # Verify the response
     updated_song = Song.query.get(song_id)

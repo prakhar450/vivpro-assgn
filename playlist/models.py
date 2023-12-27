@@ -11,7 +11,7 @@ class Song(db.Model):
     dynamic_attrs = db.Column(JSONB)  # This column will store dynamic attributes as JSON
 
     def __repr__(self):
-        return f"Post('{self.song_id}', '{self.song_title}')"
+        return f"Song('{self.song_id}', '{self.song_title}')"
 
     def to_dict(self):
         """Return a dictionary representation of the song."""

@@ -55,7 +55,7 @@ You can test the API endpoints using tools like Postman or `curl`.
 
 - **Get All Songs**: `GET /songs`
 - **Search for Songs**: `GET /search?search=Car` (Replace 'Car' with your search query)
-- **Update Song Rating**: `POST /update_rating/<song_id>` with JSON payload `{"song_rating": 4.0}`
+- **Update Song Rating**: `PUT /update_rating/<song_id>` with JSON payload `{"song_rating": 4.0}`
 
 ## Running Tests
 

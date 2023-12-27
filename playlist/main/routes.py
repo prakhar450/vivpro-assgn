@@ -57,10 +57,10 @@ def search_songs_route():
     return jsonify({'songs': songs, 'total_pages': paginated_songs.pages})
 
 
-@application.route('/update_rating/<song_id>', methods=['POST'])
+@application.route('/update_rating/<song_id>', methods=['PUT'])
 def update_song_rating_route(song_id):
     """
-    POST endpoint to update the star rating of a song.
+    PUT endpoint to update the star rating of a song.
 
     URL Parameters:
     - song_id (str): The unique identifier of the song.
@@ -74,7 +74,7 @@ def update_song_rating_route(song_id):
     """
     data = request.get_json()
     if 'song_rating' not in data or not isinstance(data['song_rating'], (float, int)):
-        return jsonify({'error': 'Invalid or missing star_rating'}), 400
+        return jsonify({'error': 'Invalid or missing song_rating'}), 400
 
     song = update_song_rating(song_id, data['song_rating'])
     if song is None:
