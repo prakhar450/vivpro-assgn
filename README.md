@@ -33,7 +33,7 @@ pip install -r requirements.txt
 3. Run the database initialization script:
 
    ```bash
-   python initialize_database.py
+   python scripts/initialize_database.py
    ```
 
    This will create a table called 'playlist' in `flask_db` with 100 songs.
