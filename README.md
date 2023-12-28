@@ -17,7 +17,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ```bash
 git clone https://github.com/prakhar450/vivpro-assgn.git
-cd vivpro-assgn
+cd vivpro-assgn-main
 ```
 
 ### Install Dependencies
